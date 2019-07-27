@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  gem:
+    build: .
+    volumes:
+      - bundle:/bundle
+      - .:/gem
+    command: sleep infinity
+volumes:
+  bundle:
+    external: true
